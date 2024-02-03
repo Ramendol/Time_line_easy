@@ -1,0 +1,179 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    font-family: 'Arial';
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top_button_menu {
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: black;
+}
+
+.top_button_menu.active {
+    margin-right: 10px;
+    background-color: #ff0000;
+    border-radius: 5px;
+    color: #fff;
+
+}
+
+
+.floating-menu {
+    position: fixed;
+    font-size: 5px;
+    top: 150px;
+    left: 10px;
+    height: 200px; /* 50% of the viewport height */
+    width: 60px;
+    background-color: #f5f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow for floating effect */
+}
+
+
+.menu-button {
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+
+
+.menu-button.active {
+    width: 40px;
+    height: 40px;
+    background-color: #ff0303;
+    border: none;
+    color: #fff;
+   
+    cursor: pointer;
+}
+
+
+
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction:column;
+  
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.div_info {
+/* Style each div_info container */
+margin-bottom: 5px;
+}
+
+.div_info label {
+/* Style the labels */
+display: block;
+margin-bottom: 0px;
+}
+
+.div_info input {
+/* Style the input fields */
+width: 100%;
+padding: 5px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+/* Style the date input with readonly attribute */
+#node_date[readonly] {
+background-color: rgb(202, 202, 202);
+}
+
+.check_box_class{
+    font-size: 15px;
+}
+
+.floating-menu_2 {
+    position: fixed;
+    font-size: 5px;
+    top: 50px;
+    right: 10px;
+    height: auto; /* 50% of the viewport height */
+    width: 80px;
+    background-color: #f5f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow for floating effect */
+}
+
+
+
+.popup-box_2 {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction:column;
+    justify-content: center;
+   
+    justify-content: space-around;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+
+.popup-box_3 {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction:column;
+    justify-content: center;
+   
+    justify-content: space-around;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.button_pop_up_menu{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: black;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Time Line</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+
+
+
+<body id="body">
+    <div class="top-menu">
+        <button class="top_button_menu" data-class="menu_btn" id="add">add</button>
+        <button class="top_button_menu" data-class="menu_btn" id="edit">edit</button>
+        <button class="top_button_menu" data-class="menu_btn" id="move">move</button>
+        <button class="top_button_menu" data-class="menu_btn" id="connect">connect</button>
+        <button class="top_button_menu" data-class="menu_btn" id="disconnect">disconnect</button>
+        <button class="top_button_menu" data-class="menu_btn" id="delete">delete</button>
+        <button class="top_button_menu" data-class="menu_btn" id="change_status">status</button>
+
+        <button class="top_button_menu" data-class="menu_btn" id="clear">Clear All</button>
+
+
+        <label for="checkbox1" class="check_box_class">Display Grid:</label>
+        <input type="checkbox" id="checkbox1" name="checkbox1" checked = true >
+
+        <button class="top_button_menu" data-class="menu_btn" id="save">Save</button>
+        <button class="top_button_menu" data-class="menu_btn" id="load">Load</button>
+
+      
+    </div>
+
+    <div class="floating-menu ">
+        <button class="menu-button" id="button1">Auto</button>  
+        <button class="menu-button" id="button2">RetCon</button>
+        <button class="menu-button" id="button3">DateOn</button>
+    </div>
+
+    <div class="floating-menu_2 ">
+        <button class="menu-button" data-class="menu_btn" id="frame">Frame</button>
+        <input type="number" value="0" id="line_stroke" pattern="[1-9]*" step="1" style="width: 70px;" >
+        <select id="lineType" onchange="changeLineType()">
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+        </select>
+   
+        <button class="menu-button" data-class="menu_btn" id="text_1">Text</button>
+        <input type="number" value="20" id="text_stroke" pattern="[1-9]*" step="1" style="width: 40px;">
+        <select id="color_1">
+            <option name='color' value="Black">Black</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+        </select>
+        <button class="menu-button" data-class="menu_btn" id="edit_txt">Edit Txt</button>
+        <button class="menu-button" data-class="menu_btn" id="move_2">Move</button>
+        <button class="menu-button" data-class="menu_btn" id="erase">Erase Canvas</button>
+
+
+    </div>
+
+
+
+    <!-- Pop-up box -->
+    <div id="popupBox" class="popup-box">
+        <h2>Node info</h2>
+        <div class="div_info">
+            <label>Node name</label>
+            <input list="labelOptions" id="node_label" name="node_label" placeholder="Type or select a fruit">
+            <datalist id="labelOptions"> 
+                <option value="Kick-off">
+                <option value="ETD">
+                <option value="ETA">
+                <option value="ETAF">
+                <option value="ETAF">
+                <option value="Approval">
+                <option value="BoM">
+                <option value="PO">
+            </datalist>
+
+
+        </div>
+        <div class="div_info">
+            <label>Display Date</label>
+            <input type="text" id="node_date" value="" readonly style="background-color: rgb(202, 202, 202);">
+        </div>
+        <input type="text" id="mouse_x" hidden>
+        <input type="text" id="mouse_y" hidden>
+        <input type="text" id="node_id_field" hidden>
+        <div class="div_info">
+            <label>Date</label>
+            <input type="date" id="calendar_1">
+        </div>
+
+        <div class="div_info">
+            <label>Days</label>
+            <input type="number" value="0" id="days_count" min="0">
+        </div>
+
+        <button class="button_pop_up_menu" id="add_label">add</button>
+        <button class="button_pop_up_menu" id="edit_label">edit</button>
+        <button class="button_pop_up_menu" id="cancel">cancel</button>
+
+
+    </div>
+
+    <div id="popup_dialog_1" class="popup-box_2">
+
+        <label>Enter the text:</label>
+        <input type="text" id="text_canvas_1_input" value="" autofocus>
+        <button class="button_pop_up_menu" id="add_text_canvas_1">add</button>
+        <button class="button_pop_up_menu" id="edit_text_canvas_1">edit</button>
+        <button class="button_pop_up_menu" id="cancel_text_canvas_1">cancel</button>
+
+
+    </div>
+
+    <div id="popup_dialog_2" class="popup-box_3">
+     
+
+        <input type="file" id="fileNameInput" >
+     
+        <input type="text" id="userFileInput" placeholder="Enter file name">
+      
+        <button class="button_pop_up_menu" id="btn_ok_file">OK</button>
+        <button class="button_pop_up_menu" id="cancel_file_dialog">cancel</button>
+        
+
+    </div>
+
+
+    <canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #000000;"></canvas>
+
+
+
+</body>
+
